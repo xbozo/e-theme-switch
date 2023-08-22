@@ -16,6 +16,11 @@ export function ThemeProvider({ children }: Props) {
     );
     
     useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')       // A light mode é passada como padrão
+        }
         localStorage.setItem(STORAGE_KEY, theme);
     }, [theme]);
 

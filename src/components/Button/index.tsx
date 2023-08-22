@@ -11,10 +11,10 @@ export function Button() {
     return (
         <button
             onClick={handleChangeTheme}
-            className={`
-                p-2 rounded mt-5
-                ${themeContext?.theme === 'dark' ? 'bg-black text-white' : 'bg-gray-300 text-black'}
-            `}
+            className="
+                p-2 rounded mt-5 bg-gray-300 text-black
+                dark:bg-black dark:text-white
+            "
         >
             Mudar Tema
         </button>

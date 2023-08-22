@@ -5,10 +5,10 @@ export function Main() {
     const themeContext = useContext(ThemeContext)
 
     return (
-        <div className={`
-            w-full h-full
-            ${themeContext?.theme === 'dark' ? 'text-white bg-black' : 'text-black bg-gray-200'}
-        `}
+        <div className="
+            w-full h-full bg-gray-200 text-black
+            dark:text-white dark:bg-black
+        "
         >
             <h1 className="text-2xl">Título da página</h1>
             <p>Conteúdo da página</p>
